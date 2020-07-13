@@ -20,7 +20,7 @@ func machineID() (string, error) {
 	if err == nil {
 		return trim(string(id)), nil
 	}
-	id, err := readFile(dbusPath)
+	id, err = readFile(dbusPath)
 	if err != nil {
 		// try fallback path
 		id, err = readFile(dbusPathEtc)
